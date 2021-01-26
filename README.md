@@ -4,7 +4,7 @@ This is a very simple kind of 2d Platformer.
 
 ## ScreenShots
 
-
+![Alt text](https://raw.githubusercontent.com/vector-on-github/sprinted-world-game/main/Screen%20Shots/scn1%20sprinted%20world.PNG "Main Menu Sprinted World")
 
 ## Game &#128299;
 
