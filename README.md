@@ -12,7 +12,8 @@ The game gets you a very simple experience of a simple character.
 The game can be played on the android device (Primarily focused platform).
 
 ## Contributing 👨‍💻 👩‍💻
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+From minor fixes, suggestions to major changes are appriciated.
+Pull requests are welcome. Please open an issue first to discuss what you would like to change.
 ### Game Engine
 This Project uses Godot Game Engine.
 
