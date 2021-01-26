@@ -13,6 +13,8 @@ The game can be played on the android device (Primarily focused platform).
 
 ## Contributing 👨‍💻 👩‍💻
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### Game Engine
+This Project uses Godot Game Engine.
 
 Please make sure to update tests as appropriate.
 
