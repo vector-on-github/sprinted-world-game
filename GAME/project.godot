@@ -19,6 +19,10 @@ config/name="sprinted-world"
 run/main_scene="res://main_menu/Main Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalSettings="*res://global_settings.gd"
+
 [display]
 
 window/stretch/mode="2d"
@@ -26,5 +30,6 @@ window/stretch/aspect="keep"
 
 [rendering]
 
+quality/voxel_cone_tracing/high_quality=true
 environment/default_clear_color=Color( 0.0784314, 0.0431373, 0.137255, 1 )
 environment/default_environment="res://default_env.tres"
