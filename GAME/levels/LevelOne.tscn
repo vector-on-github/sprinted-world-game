@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Assets 1024 Cave/Cave - Floor.png" type="Texture" id=2]
+[ext_resource path="res://assets/Assets 1024 Cave/Cave - Platforms.png" type="Texture" id=3]
+[ext_resource path="res://assets/Assets 1024 Cave/Cave - SmallRocks.png" type="Texture" id=4]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 363, 71, 0, 71, 0, -1, 363, -1 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( 184.461, 167.531, 2.81311, 167.531, 2.81311, 8.27808, 184.461, 8.27808 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 181.972, 170.019, -2.16345, 170.019, -2.16345, 10.7665, 181.972, 10.7665 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "Cave - Floor.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 77, 73, 365, 74 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Cave - Platforms.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 14, 12, 211, 209 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 4 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 5 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Cave - SmallRocks.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 27, 1616, 377, 421 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Cave - SmallRocks.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( -4, 876, 815, 624 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Cave - Platforms.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 7, 222, 594, 376 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( -131081, 1, 0, -30, 3, 0, -9, 1, 0, 65519, 3, 0, 131047, 3, 0, 131063, 1, 0, 262135, 1, 0, 327662, 3, 0, 393181, 2, 0, 393185, 2, 0, 393204, 2, 0, 393207, 1, 0, 393208, 2, 0, 458714, 3, 0, 458730, 3, 0, 458745, 2, 0, 524261, 2, 0, 524263, 2, 0, 524280, 1, 0, 589799, 2, 0, 589806, 2, 0, 589812, 3, 0, 589815, 1, 0, 655327, 3, 0, 655351, 1, 0, 589878, 3, 0, 589897, 3, 0, 589917, 3, 0, 720870, 2, 0, 720888, 1, 0, 720891, 2, 0, 786395, 3, 0, 786403, 2, 0, 786404, 2, 0, 786405, 3, 0, 786413, 3, 0, 786418, 3, 0, 786421, 2, 0, 786427, 3, 0, 720896, 2, 0, 720902, 3, 0, 720911, 2, 0, 720913, 3, 0, 720919, 2, 0, 720924, 3, 0, 851961, 1, 0, 786439, 2, 0, 786460, 2, 0, 917490, 2, 0, 917492, 2, 0, 852000, 2, 0, 852016, 2, 0, 983013, 2, 0, 983018, 2, 0, 983023, 1, 0, 983025, 1, 0, 983027, 2, 0, 983028, 1, 0, 983031, 1, 0, 983033, 2, 0, 983035, 1, 0, 917545, 2, 0, 1114109, 1, 0, 1048576, 1, 0, 1048579, 1, 0, 1048582, 1, 0, 1048585, 1, 0, 1048588, 1, 0, 1048591, 1, 0, 1048594, 1, 0, 1048597, 1, 0, 1048600, 1, 0, 1048603, 1, 0, 1048606, 1, 0, 1048609, 1, 0, 1048612, 1, 0, 1048630, 1, 0, 1048633, 1, 0, 1048636, 1, 0, 1048639, 1, 0, 1048642, 1, 0, 1048645, 1, 0, 1048648, 1, 0, 1048651, 1, 0, 1048654, 1, 0, 1048657, 1, 0, 1048660, 1, 0, 1048663, 1, 0, 1048666, 1, 0, 1048669, 1, 0, 1048672, 1, 0, 1048675, 1, 0, 1048678, 1, 0, 1114151, 1, 0, 1114163, 1, 0, 1114208, 4, 0, 1179690, 1, 0, 1179696, 1, 0, 1179701, 4, 0, 1179709, 4, 0, 1179713, 4, 0, 1179721, 4, 0, 1179729, 4, 0, 1179737, 4, 0, 1179743, 4, 0, 1179749, 4, 0, 1245229, 1, 0, 1376219, 4, 0, 1376226, 4, 0, 1376234, 4, 0, 1376242, 4, 0, 1376250, 4, 0, 1310722, 4, 0, 1310730, 4, 0, 1310732, 4, 0, 1310739, 4, 0, 1310747, 4, 0, 1310755, 4, 0, 1310763, 4, 0, 1310771, 4, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 42.7663, 478.368 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2( 0, -180 )
+rotating = true
+current = true
+smoothing_enabled = true
+smoothing_speed = 8.0

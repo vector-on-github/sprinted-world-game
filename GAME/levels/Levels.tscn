@@ -328,4 +328,5 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="level_one" to="." method="_on_level_one_pressed"]
 [connection signal="pressed" from="backbtn" to="." method="_on_backbtn_pressed"]
