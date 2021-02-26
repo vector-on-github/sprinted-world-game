@@ -1,0 +1,50 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=1]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=3]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=4]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=5]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=6]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=7]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=8]
+[ext_resource path="res://assets/enemy/enemyslime.gd" type="Script" id=9]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=10]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=11]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=12]
+[ext_resource path="res://assets/enemy/Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "die",
+"speed": 9.33
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 11.61
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idleslime",
+"speed": 10.79
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14.7073, 11.5014 )
+
+[node name="enemyslime" type="Area2D"]
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "hurt"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.31498, 0.472471 )
+shape = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_enemyslime_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/pause/pausepopup.gd" type="Script" id=1]
+
+[node name="pausemenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Popup" type="Popup" parent="."]
+pause_mode = 2
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Popup"]
+margin_left = 454.325
+margin_top = 166.108
+margin_right = 597.325
+margin_bottom = 232.108
+text = "PAUSED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="Popup"]
+margin_left = 417.436
+margin_top = 243.83
+margin_right = 632.436
+margin_bottom = 334.83
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="Popup"]
+margin_left = 417.436
+margin_top = 346.83
+margin_right = 632.436
+margin_bottom = 437.83
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stopbtn" type="Button" parent="."]
+margin_left = 916.597
+margin_top = 12.7136
+margin_right = 1004.6
+margin_bottom = 52.7136
+text = "STOP"
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Popup/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Popup/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="stopbtn" to="." method="_on_stopbtn_pressed"]

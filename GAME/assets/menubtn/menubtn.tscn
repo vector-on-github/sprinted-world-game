@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://menubtn.gd" type="Script" id=1]
+
+[node name="menubtn" type="Button"]
+margin_right = 48.0
+margin_bottom = 20.0
+text = "Menu"
+flat = true
+clip_text = true
+expand_icon = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_menubtn_pressed"]

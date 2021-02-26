@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Button-settings/button-settings.png" type="Texture" id=1]
 [ext_resource path="res://assets/Button-exit/button-exit.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/background_main_menu.png" type="Texture" id=8]
 [ext_resource path="res://assets/mainmenu.ogg" type="AudioStream" id=9]
 [ext_resource path="res://main_menu/Main Menu.gd" type="Script" id=10]
+[ext_resource path="res://assets/credits scene/credits.tscn" type="PackedScene" id=11]
 
 [node name="Main Menu" type="Control"]
 anchor_right = 1.0
@@ -19,12 +20,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -21.444
+
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 56.0
 margin_bottom = 120.0
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credits" parent="." instance=ExtResource( 11 )]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -95,10 +105,6 @@ margin_right = 268.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 6 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
-volume_db = -21.444
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/play_center_container/playbtn" to="." method="_on_playbtn_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/settings_center_container/settingsbtn" to="." method="_on_settingsbtn_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/exit_center_container/exitbtn" to="." method="_on_exitbtn_pressed"]

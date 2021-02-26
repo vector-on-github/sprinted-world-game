@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cred" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 19.0
+margin_right = 252.0
+margin_bottom = 96.0
+custom_colors/font_color = Color( 1, 0.494118, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Created By Vivek Kumar Tiwari (156) and Ankit Kumar Kevat (10) for University of Mumbai"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
